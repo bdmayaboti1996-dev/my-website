@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Md Roshidul Islam | Personal Website</title>
+
+<style>
+
+/* Basic Design */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #101827;
+  color: white;
+  text-align: center;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #0b1220;
+  padding: 15px 10px;
+  border-bottom: 2px solid #16a085;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+header h2 {
+  margin: 5px 0 15px;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  background: #263750;
+  padding: 10px 17px;
+  border-radius: 25px;
+  border: 1px solid #16a085;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: #00ff99;
+  color: #101827;
+  transform: scale(1.08);
+}
+
+/* Buttons */
+button,
+.cv-button {
+  display: inline-block;
+  padding: 12px 22px;
+  margin: 15px 5px;
+  border: none;
+  border-radius: 25px;
+  background: #16a085;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+button:hover,
+.cv-button:hover {
+  background: #00ff99;
+  color: #101827;
+  transform: scale(1.05);
+}
+
+/* Main */
+main {
+  padding: 35px 15px;
+}
+
+/* Profile */
+.profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #16a085;
+  animation: fadeUp 1s ease;
+}
+
+/* Sections */
+section {
+  max-width: 650px;
+  margin: 25px auto;
+  padding: 25px;
+  background: #1d2b42;
+  border-radius: 12px;
+  animation: fadeUp 1s ease;
+}
+
+section h2 {
+  color: #00ff99;
+}
+
+/* Skills */
+#skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+#skills h2,
+#skills .skill-intro {
+  grid-column: 1 / -1;
+}
+
+.skill-card {
+  background: #263750;
+  border: 1px solid #16a085;
+  padding: 18px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  background: #16a085;
+  transform: translateY(-5px);
+}
+
+/* Contact */
+.contact-card {
+  background: #263750;
+  border: 1px solid #16a085;
+  border-radius: 12px;
+  padding: 12px;
+  margin: 12px 0;
+  transition: 0.3s;
+}
+
+.contact-card:hover {
+  background: #16a085;
+  transform: translateY(-3px);
+}
+
+.contact-card a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+footer {
+  background: #0b1220;
+  padding: 20px;
+  margin-top: 30px;
+  border-top: 2px solid #16a085;
+  font-size: 14px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 500px) {
+
+  nav {
+    gap: 6px;
+  }
+
+  nav a {
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+
+  #skills {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 20px 15px;
+  }
+
+  header h2 {
+    font-size: 20px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+
+<h2>Md Roshidul Islam</h2>
+
+<nav>
+  <a href="#home" data-bn="হোম" data-en="Home">হোম</a>
+
+  <a href="#about" data-bn="পরিচিতি" data-en="About">পরিচিতি</a>
+
+  <a href="#skills" data-bn="দক্ষতা" data-en="Skills">দক্ষতা</a>
+
+  <a href="#contact" data-bn="যোগাযোগ" data-en="Contact">যোগাযোগ</a>
+</nav>
+
+<button onclick="changeLanguage()" id="languageBtn">
+  English
+</button>
+
+</header>
+
+<!-- Main -->
+<main id="home">
+
+<img src="profile.jpg"
+     class="profile"
+     alt="Profile Photo">
+
+<h1>Md Roshidul Islam</h1>
+
+<h3 data-bn="আমার ব্যক্তিগত ওয়েবসাইটে স্বাগতম"
+    data-en="Welcome to My Personal Website">
+আমার ব্যক্তিগত ওয়েবসাইটে স্বাগতম
+</h3>
+
+<!-- CV Download -->
+<a href="cv.pdf" download class="cv-button"
+   data-bn="CV ডাউনলোড করুন"
+   data-en="Download CV">
+CV ডাউনলোড করুন
+</a>
+
+<!-- About -->
+<section id="about">
+
+<h2 data-bn="আমার পরিচিতি"
+    data-en="About Me">
+আমার পরিচিতি
+</h2>
+
+<p data-bn="আমি Md Roshidul Islam। এটি আমার ব্যক্তিগত ওয়েবসাইট। আমি নতুন প্রযুক্তি শিখতে এবং ওয়েব ডিজাইন করতে আগ্রহী।"
+   data-en="I am Md Roshidul Islam. This is my personal website. I am interested in learning new technologies and web design.">
+আমি Md Roshidul Islam। এটি আমার ব্যক্তিগত ওয়েবসাইট।
+আমি নতুন প্রযুক্তি শিখতে এবং ওয়েব ডিজাইন করতে আগ্রহী।
+</p>
+
+</section>
+
+<!-- Skills -->
+<section id="skills">
+
+<h2 data-bn="আমার দক্ষতা"
+    data-en="My Skills">
+আমার দক্ষতা
+</h2>
+
+<p class="skill-intro"
+   data-bn="আমি যেসব বিষয় শিখছি"
+   data-en="Currently Learning">
+আমি যেসব বিষয় শিখছি
+</p>
+
+<div class="skill-card">Computer</div>
+
+<div class="skill-card">Microsoft Excel</div>
+
+<div class="skill-card">Microsoft Word</div>
+
+<div class="skill-card">Web Design</div>
+
+<div class="skill-card">HTML & CSS</div>
+
+<div class="skill-card">Graphic Design</div>
+
+<div class="skill-card">Ethical Hacking</div>
+
+<div class="skill-card">Cyber Security</div>
+
+</section>
+
+<!-- Contact -->
+<section id="contact">
+
+<h2 data-bn="যোগাযোগ করুন"
+    data-en="Contact Me">
+যোগাযোগ করুন
+</h2>
+
+<div class="contact-card">
+  <p>✉️ Gmail</p>
+  <a href="mailto:your-email@example.com">
+    Email Me
+  </a>
+</div>
+
+<div class="contact-card">
+  <p>📱 WhatsApp</p>
+  <a href="https://wa.me/8801XXXXXXXXX">
+    WhatsApp Me
+  </a>
+</div>
+
+<div class="contact-card">
+  <p>🌐 Facebook</p>
+  <a href="https://facebook.com/yourprofile">
+    Visit Facebook
+  </a>
+</div>
+
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+
+<p data-bn="© ২০২৬ Md Roshidul Islam। সর্বস্বত্ব সংরক্ষিত।"
+   data-en="© 2026 Md Roshidul Islam. All Rights Reserved.">
+© ২০২৬ Md Roshidul Islam। সর্বস্বত্ব সংরক্ষিত।
+</p>
+
+</footer>
+
+<!-- JavaScript -->
+<script>
+
+let currentLanguage = "bn";
+
+function changeLanguage() {
+
+  currentLanguage =
+    currentLanguage === "bn" ? "en" : "bn";
+
+  document.querySelectorAll("[data-bn]").forEach(element => {
+
+    element.textContent =
+      element.dataset[currentLanguage];
+
+  });
+
+  document.documentElement.lang = currentLanguage;
+
+  document.getElementById("languageBtn").textContent =
+    currentLanguage === "bn" ? "English" : "বাংলা";
+
+}
+
+</script>
+
+</body>
+</html>
